@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lottie/lottie.dart';
 import '../../../../utils/widgets/custom_text.dart';
-import '../../../../utils/widgets/empty_state_widget.dart';
 import '../../../../utils/widgets/loading_widget.dart';
 import '../../bloc/available_orders_bloc/available_orders_bloc.dart';
 import '../../bloc/available_orders_bloc/available_orders_event.dart';

@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:zenjishoppazz_rider/config/global.dart';
 
 
 import 'package:zenjishoppazz_rider/utils/widgets/custom_button.dart';

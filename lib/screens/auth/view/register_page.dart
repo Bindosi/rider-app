@@ -2,7 +2,6 @@ import 'dart:developer';
 
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
@@ -10,7 +9,6 @@ import 'package:zenjishoppazz_rider/config/app_images.dart';
 import 'package:zenjishoppazz_rider/utils/widgets/custom_dropdown.dart';
 import 'package:zenjishoppazz_rider/utils/widgets/toast_message.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'dart:io';
 import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 import '../../../config/colors.dart';

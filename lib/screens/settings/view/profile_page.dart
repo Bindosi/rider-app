@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:zenjishoppazz_rider/config/global.dart';
 
 import 'package:zenjishoppazz_rider/config/theme_bloc.dart';
 import 'package:zenjishoppazz_rider/utils/widgets/custom_appbar_without_navbar.dart';
@@ -17,7 +16,6 @@ import '../bloc/profile_bloc/profile_bloc.dart';
 import '../bloc/profile_bloc/profile_event.dart';
 import '../bloc/profile_bloc/profile_state.dart';
 import '../model/profile_model.dart';
-import '../repo/profile_repo.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});

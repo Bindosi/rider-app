@@ -50,23 +50,24 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'your-android-api-key',
-    appId: 'your-android-app-id',
-    messagingSenderId: 'your-sender-id',
-    projectId: 'your-project-id',
-    storageBucket: 'your-project-id.firebasestorage.app',
+    apiKey: 'AIzaSyBoC0a-jmmAvHJ72sTq1EET4rRq7S-bmQc',
+    appId: '1:844040350005:android:dd29aa7496497dcf25c47c',
+    messagingSenderId: '844040350005',
+    projectId: 'zenjishoppazz-30935',
+    databaseURL: 'https://zenjishoppazz-30935.firebaseio.com',
+    storageBucket: 'zenjishoppazz-30935.firebasestorage.app',
   );
-
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'your-ios-api-key',
-    appId: 'your-ios-app-id',
-    messagingSenderId: 'your-sender-id',
-    projectId: 'your-project-id',
-    storageBucket: 'your-project-id.firebasestorage.app',
-    iosBundleId: 'your-ios-bundle-id',
-    iosClientId: 'your-ios-client-id',
+    apiKey: 'AIzaSyBO-VoFVcQFDGm2L-5c9G6cvznltUbwU8s',
+    appId: '1:844040350005:ios:ccc5b3d443da418d25c47c',
+    messagingSenderId: '844040350005',
+    projectId: 'zenjishoppazz-30935',
+    databaseURL: 'https://zenjishoppazz-30935.firebaseio.com',
+    storageBucket: 'zenjishoppazz-30935.firebasestorage.app',
+    androidClientId: '844040350005-7812vrvlq2du2nop5p3ppvcjosdqmj9c.apps.googleusercontent.com',
+    iosClientId: '844040350005-6pn35dm35vos2plikck2oue7dh5jefdm.apps.googleusercontent.com',
+    iosBundleId: 'com.zenjishoppazz.rider',
   );
-
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'your-macos-api-key',
     appId: 'your-macos-app-id',

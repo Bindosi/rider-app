@@ -1,0 +1,230 @@
+{
+  "project_info": {
+    "project_number": "844040350005",
+    "firebase_url": "https://zenjishoppazz-30935.firebaseio.com",
+    "project_id": "zenjishoppazz-30935",
+    "storage_bucket": "zenjishoppazz-30935.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844040350005:android:30e520e0f32cda8825c47c",
+        "android_client_info": {
+          "package_name": "com.hyperLocal.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844040350005-ggsihav3ejrgsbgbah0jbgro7h5vbb3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoC0a-jmmAvHJ72sTq1EET4rRq7S-bmQc"
+        },
+        {
+          "current_key": "AIzaSyCERxZkNb_yXEVqdPJypudSl4xwqyzzqpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844040350005-9rg7ub6bkbb0aguj21787d3sfafdeffo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "844040350005-3uv91n2ldr0t0fjvfv1vfbibc6r72h6m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.zenjishoppazz.zenjishoppazz"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844040350005:android:f368d7a4597bc37c25c47c",
+        "android_client_info": {
+          "package_name": "com.zenjishoppazz.firqatunnajia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844040350005-ggsihav3ejrgsbgbah0jbgro7h5vbb3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoC0a-jmmAvHJ72sTq1EET4rRq7S-bmQc"
+        },
+        {
+          "current_key": "AIzaSyCERxZkNb_yXEVqdPJypudSl4xwqyzzqpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844040350005-9rg7ub6bkbb0aguj21787d3sfafdeffo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "844040350005-3uv91n2ldr0t0fjvfv1vfbibc6r72h6m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.zenjishoppazz.zenjishoppazz"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844040350005:android:dd29aa7496497dcf25c47c",
+        "android_client_info": {
+          "package_name": "com.zenjishoppazz.rider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844040350005-ggsihav3ejrgsbgbah0jbgro7h5vbb3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoC0a-jmmAvHJ72sTq1EET4rRq7S-bmQc"
+        },
+        {
+          "current_key": "AIzaSyCERxZkNb_yXEVqdPJypudSl4xwqyzzqpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844040350005-9rg7ub6bkbb0aguj21787d3sfafdeffo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "844040350005-3uv91n2ldr0t0fjvfv1vfbibc6r72h6m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.zenjishoppazz.zenjishoppazz"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844040350005:android:9132a7714f5ebdc6",
+        "android_client_info": {
+          "package_name": "com.zenjishoppazz.zenjishoppazz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844040350005-7812vrvlq2du2nop5p3ppvcjosdqmj9c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zenjishoppazz.zenjishoppazz",
+            "certificate_hash": "be0f379e600ac3ce2cead5a7c7baebacfcdd2c14"
+          }
+        },
+        {
+          "client_id": "844040350005-jjad11r413gbs4d1bln1evj77om2o3rg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zenjishoppazz.zenjishoppazz",
+            "certificate_hash": "193bdd4809e06e3a93f2533135c09dd0bf9162f8"
+          }
+        },
+        {
+          "client_id": "844040350005-rjoc3pnl9ffqgdjjq5g914ksdebni03b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zenjishoppazz.zenjishoppazz",
+            "certificate_hash": "6ffcbd831e72a41e4bc63b109e08dfa67734a7eb"
+          }
+        },
+        {
+          "client_id": "844040350005-ggsihav3ejrgsbgbah0jbgro7h5vbb3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoC0a-jmmAvHJ72sTq1EET4rRq7S-bmQc"
+        },
+        {
+          "current_key": "AIzaSyCERxZkNb_yXEVqdPJypudSl4xwqyzzqpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844040350005-9rg7ub6bkbb0aguj21787d3sfafdeffo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "844040350005-3uv91n2ldr0t0fjvfv1vfbibc6r72h6m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.zenjishoppazz.zenjishoppazz"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844040350005:android:643642c8bfae238625c47c",
+        "android_client_info": {
+          "package_name": "com.zenjishoppazz.zsmessenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844040350005-ggsihav3ejrgsbgbah0jbgro7h5vbb3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoC0a-jmmAvHJ72sTq1EET4rRq7S-bmQc"
+        },
+        {
+          "current_key": "AIzaSyCERxZkNb_yXEVqdPJypudSl4xwqyzzqpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844040350005-9rg7ub6bkbb0aguj21787d3sfafdeffo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "844040350005-3uv91n2ldr0t0fjvfv1vfbibc6r72h6m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.zenjishoppazz.zenjishoppazz"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

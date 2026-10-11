@@ -8,7 +8,7 @@ import '../../bloc/withdrawal_bloc.dart';
 import '../../bloc/withdrawal_event.dart';
 import '../../bloc/withdrawal_state.dart';
 import '../../../../../utils/currency_formatter.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 import '../../../../../utils/widgets/custom_text.dart';
 
 class CreateWithdrawalSheet extends StatefulWidget {
@@ -140,8 +140,8 @@ class _CreateWithdrawalSheetState extends State<CreateWithdrawalSheet> {
                                                 .deliveryBoySettings
                                                 ?.value
                                                 ?.currencySymbol ??
-                                            '₹'
-                                        : '₹';
+                                            'TSh'
+                                        : 'TSh';
                                 return CustomText(
                                   text: '$currencySymbol ',
                                   fontSize: 18,

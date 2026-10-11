@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hyper_local/config/global.dart';
+import 'package:zenjishoppazz_rider/config/global.dart';
 
-import 'package:hyper_local/screens/auth/repo/auth_repo.dart';
+import 'package:zenjishoppazz_rider/screens/auth/repo/auth_repo.dart';
 import 'auth_event.dart';
 import 'auth_state.dart';
 

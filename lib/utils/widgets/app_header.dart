@@ -5,7 +5,7 @@ import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 import '../../config/colors.dart';
 import '../../router/app_routes.dart';
 import '../../screens/feed_page/bloc/deliveryboy_status_update_bloc/deliveryboy_status_bloc.dart';

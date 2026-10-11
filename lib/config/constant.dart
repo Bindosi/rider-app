@@ -1,6 +1,6 @@
-const String appName = 'Hyperlocal - Rider App';
-const String packageName = 'YOUR_APP_PACKAGE_NAME';
-const String domainBaseUrl = 'YOUR_DOMAIN_BASE_URL';
+const String appName = 'Zenjishoppazz Rider';
+const String packageName = 'com.zenjishoppazz.rider';
+const String domainBaseUrl = 'https://admin.zenjishoppazz.com';
 const String baseUrl = '$domainBaseUrl/api/delivery-boy/';
 const String deliveryZoneUrl = '$domainBaseUrl/api/';
 const String defaultTheme = 'light';

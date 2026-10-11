@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../utils/widgets/custom_text.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
 class WithdrawalEmptyState extends StatelessWidget {
   const WithdrawalEmptyState({super.key});

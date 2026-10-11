@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hyper_local/config/colors.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
-import 'package:hyper_local/router/app_routes.dart';
-import 'package:hyper_local/screens/feed_page/model/available_orders.dart';
-import 'package:hyper_local/utils/currency_formatter.dart';
-import 'package:hyper_local/utils/widgets/custom_card.dart';
-import 'package:hyper_local/utils/widgets/custom_text.dart';
+import 'package:zenjishoppazz_rider/config/colors.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/router/app_routes.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/model/available_orders.dart';
+import 'package:zenjishoppazz_rider/utils/currency_formatter.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_card.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_text.dart';
 
 
 class MyOrderCard extends StatelessWidget {

@@ -14,7 +14,7 @@ import '../bloc/earnings_event.dart';
 import '../bloc/earnings_state.dart';
 import '../model/earnings_model.dart';
 import '../repo/earnings_repo.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
 
 class AllEarningsPage extends StatefulWidget {

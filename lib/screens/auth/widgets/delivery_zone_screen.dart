@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import '../../../utils/widgets/custom_button.dart';
 import '../../../utils/widgets/custom_text.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
 import '../bloc/delivery_zone_bloc/delivery_zone_bloc.dart';
 import '../bloc/delivery_zone_bloc/delivery_zone_event.dart';

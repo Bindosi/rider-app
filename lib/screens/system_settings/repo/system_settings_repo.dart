@@ -1,5 +1,5 @@
-import 'package:hyper_local/config/api_base_helper.dart';
-import 'package:hyper_local/config/api_routes.dart';
+import 'package:zenjishoppazz_rider/config/api_base_helper.dart';
+import 'package:zenjishoppazz_rider/config/api_routes.dart';
 import '../model/settings_repo.dart';
 
 class SystemSettingsRepo {

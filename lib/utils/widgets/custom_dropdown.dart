@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_local/config/colors.dart';
+import 'package:zenjishoppazz_rider/config/colors.dart';
 
 class CustomDropdownFormField<T> extends StatelessWidget {
   final String? labelText;

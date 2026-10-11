@@ -3,14 +3,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hyper_local/config/global.dart';
+import 'package:zenjishoppazz_rider/config/global.dart';
 
 
-import 'package:hyper_local/utils/widgets/custom_button.dart';
-import 'package:hyper_local/utils/widgets/custom_text.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
-import 'package:hyper_local/screens/feed_page/bloc/deliveryboy_status_update_bloc/deliveryboy_status_bloc.dart';
-import 'package:hyper_local/screens/feed_page/bloc/deliveryboy_status_update_bloc/deliveryboy_status_event.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_button.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_text.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/deliveryboy_status_update_bloc/deliveryboy_status_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/deliveryboy_status_update_bloc/deliveryboy_status_event.dart';
 import '../../config/colors.dart';
 import 'loading_widget.dart';
 import 'toast_message.dart';

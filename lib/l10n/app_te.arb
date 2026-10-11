@@ -1,6 +1,6 @@
 {
   "@@locale": "te",
-  "appTitle": "హైపర్ లోకల్ డెలివరీ",
+  "appTitle": "Zenjishoppazz డెలివరీ",
   
   "@@auth": {},
   "login": "లాగిన్",
@@ -631,7 +631,7 @@
   "darkTheme": "డార్క్ థీమ్",
   "easyOnEyesLowLight": "తక్కువ వెలుగులో కళ్ళకు సులభం",
   "preview": "మునుజూపు",
-  "hyperLocal": "హైపర్ లోకల్",
+  "hyperLocal": "Zenjishoppazz",
   "storePickup": "స్టోర్ నుండి పికప్",
   "collectItemsStores": "స్టోర్ల నుండి వస్తువులను సేకరించండి",
 

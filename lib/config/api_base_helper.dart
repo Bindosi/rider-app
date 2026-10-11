@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:hyper_local/config/security.dart';
+import 'package:zenjishoppazz_rider/config/security.dart';
 import 'error_message_code.dart';
 
 class ApiBaseHelper {

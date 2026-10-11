@@ -32,7 +32,7 @@ import '../../../../utils/widgets/custom_button.dart';
 import '../../../../utils/widgets/reusable_bottom_sheet.dart';
 import '../../widgets/orderdetails_widgets/index.dart';
 import '../../../../router/app_routes.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 import 'widgets/index.dart' as new_widgets;
 import '../../services/order_service.dart';
 import '../../services/dialog_service.dart';

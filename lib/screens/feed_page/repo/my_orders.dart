@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:hyper_local/config/api_routes.dart';
+import 'package:zenjishoppazz_rider/config/api_routes.dart';
 import '../../../config/api_base_helper.dart';
 
 class MyOrdersRepo {

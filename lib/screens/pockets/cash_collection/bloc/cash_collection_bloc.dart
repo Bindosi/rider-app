@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hyper_local/screens/pockets/cash_collection/model/cash_collection_model.dart';
+import 'package:zenjishoppazz_rider/screens/pockets/cash_collection/model/cash_collection_model.dart';
 import '../repo/cash_collection_repo.dart';
 import 'cash_collection_event.dart';
 import 'cash_collection_state.dart';

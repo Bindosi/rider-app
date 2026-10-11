@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../config/theme_bloc.dart';
 
-import '../../../../config/colors.dart';
+import '../../config/colors.dart';
 class CustomScaffold extends StatelessWidget {
   final Widget body;
   final PreferredSizeWidget? appBar;

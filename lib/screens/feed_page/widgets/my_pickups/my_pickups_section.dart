@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hyper_local/config/colors.dart';
-import 'package:hyper_local/screens/feed_page/bloc/return_order/pickup_orders_list_bloc/pickup_order_list_bloc.dart';
-import 'package:hyper_local/screens/feed_page/widgets/my_pickups/my_pickups_card.dart';
+import 'package:zenjishoppazz_rider/config/colors.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/return_order/pickup_orders_list_bloc/pickup_order_list_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/widgets/my_pickups/my_pickups_card.dart';
 import 'package:lottie/lottie.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
 import '../../../../utils/widgets/custom_text.dart';
 import '../../../../utils/widgets/loading_widget.dart';

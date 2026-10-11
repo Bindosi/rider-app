@@ -9,7 +9,7 @@ class AppLocalizationsFr extends AppLocalizations {
   AppLocalizationsFr([String locale = 'fr']) : super(locale);
 
   @override
-  String get appTitle => 'Livraison Hyper Locale';
+  String get appTitle => 'Zenjishoppazz Rider';
 
   @override
   String get createAccount => 'Créer un compte';
@@ -1868,7 +1868,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get preview => 'Preview';
 
   @override
-  String get hyperLocal => 'Hyper Local';
+  String get hyperLocal => 'Zenjishoppazz';
 
   @override
   String get collectItemsStores => 'Collect items from stores';

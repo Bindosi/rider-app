@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hyper_local/utils/widgets/custom_text.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_text.dart';
 import '../../config/app_images.dart';
 import 'custom_button.dart';
 import '../../l10n/app_localizations.dart';

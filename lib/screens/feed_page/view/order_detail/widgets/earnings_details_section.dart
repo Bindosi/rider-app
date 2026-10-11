@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hyper_local/utils/widgets/custom_card.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_card.dart';
 import '../../../../../utils/currency_formatter.dart';
 import '../../../../../utils/widgets/custom_text.dart';
 import '../../../../../l10n/app_localizations.dart';

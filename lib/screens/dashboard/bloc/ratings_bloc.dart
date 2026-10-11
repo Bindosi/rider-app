@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hyper_local/screens/dashboard/model/ratings_model.dart';
+import 'package:zenjishoppazz_rider/screens/dashboard/model/ratings_model.dart';
 import '../repo/ratings_repo.dart';
 import 'ratings_event.dart';
 import 'ratings_state.dart';

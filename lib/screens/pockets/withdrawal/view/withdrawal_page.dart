@@ -1,7 +1,7 @@
 // import 'package:flutter/material.dart';
 // import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
-// import 'package:hyper_local/utils/widgets/custom_scaffold.dart';
+// import 'package:zenjishoppazz_rider/utils/widgets/custom_scaffold.dart';
 // import '../../../../utils/widgets/loading_widget.dart';
 // import '../../../../utils/widgets/custom_appbar_without_navbar.dart';
 // import '../bloc/withdrawal_bloc.dart';
@@ -15,7 +15,7 @@
 // import 'widgets/withdrawal_empty_state.dart';
 // import 'widgets/withdrawal_error_state.dart';
 // import '../../../../utils/widgets/toast_message.dart';
-// import 'package:hyper_local/l10n/app_localizations.dart';
+// import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 // import '../../../../utils/widgets/custom_text.dart';
 //
 // class WithdrawalPage extends StatefulWidget {

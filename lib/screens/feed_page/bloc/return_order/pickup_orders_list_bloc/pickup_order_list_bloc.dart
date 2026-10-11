@@ -2,8 +2,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
-import 'package:hyper_local/screens/feed_page/model/return_orders_list_model.dart';
-import 'package:hyper_local/screens/feed_page/repo/return_order_repo.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/model/return_orders_list_model.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/repo/return_order_repo.dart';
 
 part 'pickup_order_list_event.dart';
 part 'pickup_order_list_state.dart';

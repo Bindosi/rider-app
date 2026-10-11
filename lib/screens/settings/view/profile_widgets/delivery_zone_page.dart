@@ -1,12 +1,13 @@
+import 'package:zenjishoppazz_rider/utils/currency_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hyper_local/utils/widgets/custom_appbar_without_navbar.dart';
-import 'package:hyper_local/utils/widgets/custom_card.dart';
-import 'package:hyper_local/utils/widgets/custom_text.dart';
-import 'package:hyper_local/utils/widgets/custom_button.dart';
-import 'package:hyper_local/utils/widgets/loading_widget.dart';
-import 'package:hyper_local/utils/widgets/toast_message.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_appbar_without_navbar.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_card.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_text.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_button.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/loading_widget.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/toast_message.dart';
 import '../../../../config/colors.dart';
 import '../../../../utils/widgets/custom_scaffold.dart';
 import '../../bloc/profile_bloc/profile_bloc.dart';
@@ -14,7 +15,7 @@ import '../../bloc/profile_bloc/profile_event.dart';
 import '../../bloc/profile_bloc/profile_state.dart';
 import '../../repo/profile_repo.dart';
 import '../../model/profile_model.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
 class DeliveryZonePage extends StatefulWidget {
   const DeliveryZonePage({super.key});
@@ -123,7 +124,7 @@ class _DeliveryZonePageState extends State<DeliveryZonePage> {
           
           _buildInfoCard(
             title: AppLocalizations.of(context)!.regularDeliveryCharges,
-            value: '₹${deliveryZone.regularDeliveryCharges ?? 'N/A'}',
+            value: deliveryZone.regularDeliveryCharges == null ? 'N/A' : CurrencyFormatter.formatAmount(context, deliveryZone.regularDeliveryCharges),
             icon: Icons.local_shipping_outlined,
             color: Colors.orange,
           ),
@@ -131,7 +132,7 @@ class _DeliveryZonePageState extends State<DeliveryZonePage> {
           
           _buildInfoCard(
             title: AppLocalizations.of(context)!.rushDeliveryCharges,
-            value: '₹${deliveryZone.rushDeliveryCharges ?? 'N/A'}',
+            value: deliveryZone.rushDeliveryCharges == null ? 'N/A' : CurrencyFormatter.formatAmount(context, deliveryZone.rushDeliveryCharges),
             icon: Icons.flash_on_outlined,
             color: Colors.red,
           ),
@@ -139,7 +140,7 @@ class _DeliveryZonePageState extends State<DeliveryZonePage> {
           
           _buildInfoCard(
             title: AppLocalizations.of(context)!.freeDeliveryAmount,
-            value: '₹${deliveryZone.freeDeliveryAmount?.toStringAsFixed(2) ?? 'N/A'}',
+            value: deliveryZone.freeDeliveryAmount == null ? 'N/A' : CurrencyFormatter.formatAmount(context, deliveryZone.freeDeliveryAmount),
             icon: Icons.free_breakfast_outlined,
             color: Colors.green,
           ),
@@ -171,7 +172,7 @@ class _DeliveryZonePageState extends State<DeliveryZonePage> {
           
           _buildInfoCard(
             title: AppLocalizations.of(context)!.baseFee,
-            value: '₹${deliveryZone.deliveryBoyBaseFee ?? 'N/A'}',
+            value: deliveryZone.deliveryBoyBaseFee == null ? 'N/A' : CurrencyFormatter.formatAmount(context, deliveryZone.deliveryBoyBaseFee),
             icon: Icons.account_balance_wallet_outlined,
             color: Colors.green,
           ),
@@ -179,7 +180,7 @@ class _DeliveryZonePageState extends State<DeliveryZonePage> {
           
           _buildInfoCard(
             title: AppLocalizations.of(context)!.perStorePickupFee,
-            value: '₹${deliveryZone.deliveryBoyPerStorePickupFee ?? 'N/A'}',
+            value: deliveryZone.deliveryBoyPerStorePickupFee == null ? 'N/A' : CurrencyFormatter.formatAmount(context, deliveryZone.deliveryBoyPerStorePickupFee),
             icon: Icons.store_outlined,
             color: Colors.blue,
           ),
@@ -187,7 +188,7 @@ class _DeliveryZonePageState extends State<DeliveryZonePage> {
           
           _buildInfoCard(
             title: AppLocalizations.of(context)!.distanceBasedFee,
-            value: '₹${deliveryZone.deliveryBoyDistanceBasedFee ?? 'N/A'}',
+            value: deliveryZone.deliveryBoyDistanceBasedFee == null ? 'N/A' : CurrencyFormatter.formatAmount(context, deliveryZone.deliveryBoyDistanceBasedFee),
             icon: Icons.route_outlined,
             color: Colors.orange,
           ),
@@ -195,7 +196,7 @@ class _DeliveryZonePageState extends State<DeliveryZonePage> {
           
           _buildInfoCard(
             title: AppLocalizations.of(context)!.perOrderIncentive,
-            value: '₹${deliveryZone.deliveryBoyPerOrderIncentive ?? 'N/A'}',
+            value: deliveryZone.deliveryBoyPerOrderIncentive == null ? 'N/A' : CurrencyFormatter.formatAmount(context, deliveryZone.deliveryBoyPerOrderIncentive),
             icon: Icons.emoji_events_outlined,
             color: Colors.purple,
           ),
@@ -207,7 +208,7 @@ class _DeliveryZonePageState extends State<DeliveryZonePage> {
           
           _buildInfoCard(
             title: AppLocalizations.of(context)!.handlingCharges,
-            value: '₹${deliveryZone.handlingCharges?.toStringAsFixed(2) ?? 'N/A'}',
+            value: deliveryZone.handlingCharges == null ? 'N/A' : CurrencyFormatter.formatAmount(context, deliveryZone.handlingCharges),
             icon: Icons.handyman_outlined,
             color: Colors.grey,
           ),
@@ -215,7 +216,7 @@ class _DeliveryZonePageState extends State<DeliveryZonePage> {
           
           _buildInfoCard(
             title: AppLocalizations.of(context)!.perStoreDropOffFee,
-            value: '₹${deliveryZone.perStoreDropOffFee?.toStringAsFixed(2) ?? 'N/A'}',
+            value: deliveryZone.perStoreDropOffFee == null ? 'N/A' : CurrencyFormatter.formatAmount(context, deliveryZone.perStoreDropOffFee),
             icon: Icons.delivery_dining_outlined,
             color: Colors.teal,
           ),

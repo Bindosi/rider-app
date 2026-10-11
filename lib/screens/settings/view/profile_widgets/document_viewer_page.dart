@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:flutter/services.dart';
-import 'package:hyper_local/utils/widgets/custom_appbar_without_navbar.dart';
-import 'package:hyper_local/utils/widgets/custom_text.dart';
-import 'package:hyper_local/utils/widgets/custom_button.dart';
-import 'package:hyper_local/utils/widgets/loading_widget.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_appbar_without_navbar.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_text.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_button.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/loading_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:path_provider/path_provider.dart';

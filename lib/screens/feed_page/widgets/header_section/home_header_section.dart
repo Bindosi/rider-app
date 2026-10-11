@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hyper_local/utils/widgets/custom_button.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_button.dart';
 import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../config/colors.dart';
@@ -15,8 +15,8 @@ import '../../bloc/deliveryboy_status_update_bloc/deliveryboy_status_bloc.dart';
 import '../../bloc/deliveryboy_status_update_bloc/deliveryboy_status_event.dart';
 import '../../bloc/deliveryboy_status_update_bloc/deliveryboy_status_state.dart';
 
-import 'package:hyper_local/l10n/app_localizations.dart';
-import 'package:hyper_local/router/app_routes.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/router/app_routes.dart';
 
 class HomeHeaderSection extends StatelessWidget {
   final Function() handleToggle;

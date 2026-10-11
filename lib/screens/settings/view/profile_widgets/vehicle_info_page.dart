@@ -3,13 +3,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hyper_local/screens/system_settings/bloc/system_settings_bloc.dart';
-import 'package:hyper_local/utils/widgets/custom_appbar_without_navbar.dart';
-import 'package:hyper_local/utils/widgets/custom_scaffold.dart';
-import 'package:hyper_local/utils/widgets/custom_text.dart';
-import 'package:hyper_local/utils/widgets/custom_button.dart';
-import 'package:hyper_local/utils/widgets/empty_state_widget.dart';
-import 'package:hyper_local/utils/widgets/toast_message.dart';
+import 'package:zenjishoppazz_rider/screens/system_settings/bloc/system_settings_bloc.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_appbar_without_navbar.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_scaffold.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_text.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_button.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/empty_state_widget.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/toast_message.dart';
 import 'package:file_picker/file_picker.dart';
 import 'dart:io';
 import '../../../../config/colors.dart';
@@ -20,7 +20,7 @@ import '../../bloc/profile_bloc/profile_state.dart';
 import '../../model/profile_model.dart';
 import '../../../../utils/widgets/custom_textfield.dart';
 import 'document_viewer_page.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
 class VehicleInfoPage extends StatefulWidget {
   const VehicleInfoPage({super.key});

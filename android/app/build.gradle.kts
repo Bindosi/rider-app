@@ -18,7 +18,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace = "YOUR_APP_PACKAGE_NAME"
+    namespace = "com.zenjishoppazz.rider"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = "27.0.12077973"
 
@@ -34,7 +34,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "YOUR_APP_PACKAGE_NAME"
+        applicationId = "com.zenjishoppazz.rider"
         // You can update the following values to match your application needs.
         // For settings information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

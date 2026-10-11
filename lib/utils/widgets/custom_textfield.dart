@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-import '../../../../config/colors.dart';
+import '../../config/colors.dart';
 class CustomTextFormField extends StatelessWidget {
   final TextEditingController? controller;
   final String? labelText;

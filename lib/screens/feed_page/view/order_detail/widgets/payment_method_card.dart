@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hyper_local/utils/widgets/custom_card.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_card.dart';
 import '../../../../../utils/widgets/custom_text.dart';
 
 import '../../../model/available_orders.dart';
 
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
 class PaymentMethodCard extends StatelessWidget {
   final Orders order;

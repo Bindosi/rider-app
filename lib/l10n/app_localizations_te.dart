@@ -9,7 +9,7 @@ class AppLocalizationsTe extends AppLocalizations {
   AppLocalizationsTe([String locale = 'te']) : super(locale);
 
   @override
-  String get appTitle => 'హైపర్ లోకల్ డెలివరీ';
+  String get appTitle => 'Zenjishoppazz డెలివరీ';
 
   @override
   String get createAccount => 'ఖాతా సృష్టించండి';
@@ -1852,7 +1852,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get preview => 'మునుజూపు';
 
   @override
-  String get hyperLocal => 'హైపర్ లోకల్';
+  String get hyperLocal => 'Zenjishoppazz';
 
   @override
   String get collectItemsStores => 'స్టోర్ల నుండి వస్తువులను సేకరించండి';

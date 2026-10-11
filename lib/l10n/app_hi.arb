@@ -1,6 +1,6 @@
 {
   "@@locale": "hi",
-  "appTitle": "हाइपर लोकल डिलीवरी",
+  "appTitle": "Zenjishoppazz डिलीवरी",
   
   "@@auth": {},
   "createAccount": "खाता बनाएं",
@@ -847,7 +847,7 @@
   "darkTheme": "डार्क थीम",
   "easyOnEyesLowLight": "कम रोशनी में आंखों के लिए आसान",
   "preview": "पूर्वावलोकन",
-  "hyperLocal": "हाइपर लोकल",
+  "hyperLocal": "Zenjishoppazz",
   "storePickup": "स्टोर से पिकअप",
   "collectItemsStores": "स्टोर से आइटम इकट्ठा करें",
 

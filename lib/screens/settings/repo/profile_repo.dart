@@ -5,7 +5,7 @@ import '../../../config/api_base_helper.dart';
 import '../../../config/constant.dart';
 import '../model/profile_model.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:hyper_local/config/security.dart' as sec;
+import 'package:zenjishoppazz_rider/config/security.dart' as sec;
 
 class ProfileRepo {
   Future<ProfileModel> getProfile() async {

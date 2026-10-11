@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'custom_text.dart';
 
-import '../../../../config/colors.dart';
+import '../../config/colors.dart';
 class CustomButton extends StatelessWidget {
   final String text;
   final VoidCallback? onPressed;

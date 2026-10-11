@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hyper_local/config/global.dart';
+import 'package:zenjishoppazz_rider/config/global.dart';
 
-import 'package:hyper_local/screens/feed_page/bloc/deliveryboy_status_update_bloc/deliveryboy_status_bloc.dart';
-import 'package:hyper_local/screens/feed_page/bloc/deliveryboy_status_update_bloc/deliveryboy_status_event.dart';
-import 'package:hyper_local/screens/feed_page/bloc/deliveryboy_status_update_bloc/deliveryboy_status_state.dart';
-import 'package:hyper_local/screens/feed_page/view/home_page.dart';
-import 'package:hyper_local/utils/widgets/bottombar.dart';
-import 'package:hyper_local/utils/widgets/custom_scaffold.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/deliveryboy_status_update_bloc/deliveryboy_status_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/deliveryboy_status_update_bloc/deliveryboy_status_event.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/deliveryboy_status_update_bloc/deliveryboy_status_state.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/view/home_page.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/bottombar.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_scaffold.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});

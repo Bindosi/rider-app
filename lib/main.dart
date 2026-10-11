@@ -6,32 +6,32 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:hyper_local/router/app_routes.dart';
-import 'package:hyper_local/screens/auth/bloc/auth_bloc/auth_bloc.dart';
-import 'package:hyper_local/screens/auth/bloc/delivery_zone_bloc/delivery_zone_bloc.dart';
-import 'package:hyper_local/screens/dashboard/bloc/ratings_bloc.dart';
-import 'package:hyper_local/screens/dashboard/repo/ratings_repo.dart';
-import 'package:hyper_local/screens/feed_page/bloc/deliveryboy_status_update_bloc/deliveryboy_status_bloc.dart';
-import 'package:hyper_local/screens/feed_page/bloc/available_orders_bloc/available_orders_bloc.dart';
-import 'package:hyper_local/screens/feed_page/bloc/items_collected_bloc/items_collected_bloc.dart';
-import 'package:hyper_local/screens/feed_page/bloc/my_orders_bloc/my_orders_bloc.dart';
-import 'package:hyper_local/screens/feed_page/bloc/return_order/pickup_order_details_bloc/pickup_order_details_bloc.dart';
-import 'package:hyper_local/screens/feed_page/bloc/return_order/pickup_orders_list_bloc/pickup_order_list_bloc.dart';
-import 'package:hyper_local/screens/feed_page/bloc/return_order/return_orders_list_bloc/return_order_list_bloc.dart';
-import 'package:hyper_local/screens/feed_page/bloc/return_order/update_return_order_status_bloc/update_return_order_status_bloc.dart';
-import 'package:hyper_local/screens/pockets/cash_collection/bloc/cash_collection_bloc.dart';
-import 'package:hyper_local/screens/pockets/cash_collection/bloc/cash_collection_event.dart';
-import 'package:hyper_local/screens/pockets/cash_collection/repo/cash_collection_repo.dart';
-import 'package:hyper_local/screens/pockets/earnings/bloc/earnings_bloc.dart';
-import 'package:hyper_local/screens/pockets/earnings/repo/earnings_repo.dart';
-import 'package:hyper_local/screens/pockets/withdrawal/bloc/withdrawal_bloc.dart';
-import 'package:hyper_local/screens/pockets/withdrawal/repo/withdrawal_repo.dart';
-import 'package:hyper_local/screens/settings/bloc/profile_bloc/profile_bloc.dart';
-import 'package:hyper_local/screens/settings/bloc/profile_bloc/profile_event.dart';
-import 'package:hyper_local/screens/settings/repo/profile_repo.dart';
-import 'package:hyper_local/screens/system_settings/bloc/system_settings_bloc.dart';
-import 'package:hyper_local/screens/system_settings/bloc/system_settings_event.dart';
-import 'package:hyper_local/screens/system_settings/repo/system_settings_repo.dart';
+import 'package:zenjishoppazz_rider/router/app_routes.dart';
+import 'package:zenjishoppazz_rider/screens/auth/bloc/auth_bloc/auth_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/auth/bloc/delivery_zone_bloc/delivery_zone_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/dashboard/bloc/ratings_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/dashboard/repo/ratings_repo.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/deliveryboy_status_update_bloc/deliveryboy_status_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/available_orders_bloc/available_orders_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/items_collected_bloc/items_collected_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/my_orders_bloc/my_orders_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/return_order/pickup_order_details_bloc/pickup_order_details_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/return_order/pickup_orders_list_bloc/pickup_order_list_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/return_order/return_orders_list_bloc/return_order_list_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/return_order/update_return_order_status_bloc/update_return_order_status_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/pockets/cash_collection/bloc/cash_collection_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/pockets/cash_collection/bloc/cash_collection_event.dart';
+import 'package:zenjishoppazz_rider/screens/pockets/cash_collection/repo/cash_collection_repo.dart';
+import 'package:zenjishoppazz_rider/screens/pockets/earnings/bloc/earnings_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/pockets/earnings/repo/earnings_repo.dart';
+import 'package:zenjishoppazz_rider/screens/pockets/withdrawal/bloc/withdrawal_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/pockets/withdrawal/repo/withdrawal_repo.dart';
+import 'package:zenjishoppazz_rider/screens/settings/bloc/profile_bloc/profile_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/settings/bloc/profile_bloc/profile_event.dart';
+import 'package:zenjishoppazz_rider/screens/settings/repo/profile_repo.dart';
+import 'package:zenjishoppazz_rider/screens/system_settings/bloc/system_settings_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/system_settings/bloc/system_settings_event.dart';
+import 'package:zenjishoppazz_rider/screens/system_settings/repo/system_settings_repo.dart';
 import 'config/global.dart';
 import 'config/theme.dart';
 import 'config/theme_bloc.dart';
@@ -63,13 +63,13 @@ void main() async {
   }
 
   // Initialize Notification Manager AFTER Firebase
-  try {
-    log('🔔 Initializing NotificationManager...');
-    await NotificationManager().initialize();
-    log('✅ NotificationManager initialized');
-  } catch (e) {
-    log('❌ NotificationManager initialization error: $e');
-  }
+  // Runs in the background so the app opens straight away: setup waits for
+  // the permission answer and, on iOS, for Apple's push token.
+  log('🔔 Initializing NotificationManager...');
+  NotificationManager().initialize().then(
+    (_) => log('✅ NotificationManager initialized'),
+    onError: (e) => log('❌ NotificationManager initialization error: $e'),
+  );
 
   await Hive.initFlutter();
   await Hive.openBox('theme_box');

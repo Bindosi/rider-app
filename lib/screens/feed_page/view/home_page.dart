@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hyper_local/screens/feed_page/bloc/return_order/pickup_orders_list_bloc/pickup_order_list_bloc.dart';
-import 'package:hyper_local/screens/feed_page/bloc/return_order/return_orders_list_bloc/return_order_list_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/return_order/pickup_orders_list_bloc/pickup_order_list_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/bloc/return_order/return_orders_list_bloc/return_order_list_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../config/global.dart';
 import '../../../config/theme_bloc.dart';
@@ -21,7 +21,7 @@ import '../bloc/available_orders_bloc/available_orders_bloc.dart';
 import '../bloc/available_orders_bloc/available_orders_event.dart';
 import '../bloc/my_orders_bloc/my_orders_bloc.dart';
 import '../bloc/my_orders_bloc/my_orders_event.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
 // Function to open Google Maps with directions
 Future<void> openGoogleMapsDirections({

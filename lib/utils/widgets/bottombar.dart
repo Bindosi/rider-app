@@ -2,13 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hyper_local/utils/widgets/custom_scaffold.dart';
-import 'package:hyper_local/utils/widgets/custom_text.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_scaffold.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_text.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../l10n/app_localizations.dart';
 import '../../router/app_routes.dart';
-import '../../../../config/colors.dart';
+import '../../config/colors.dart';
 import '../../config/theme_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

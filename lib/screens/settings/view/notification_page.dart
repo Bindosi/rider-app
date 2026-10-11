@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hyper_local/config/colors.dart';
-import 'package:hyper_local/utils/widgets/custom_appbar_without_navbar.dart';
-import 'package:hyper_local/utils/widgets/custom_card.dart';
-import 'package:hyper_local/utils/widgets/custom_scaffold.dart';
-import 'package:hyper_local/utils/widgets/custom_text.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/config/colors.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_appbar_without_navbar.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_card.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_scaffold.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_text.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 import 'package:swipe_to/swipe_to.dart';
 
 class NotificationPage extends StatefulWidget {

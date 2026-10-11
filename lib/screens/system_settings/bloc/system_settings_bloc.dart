@@ -108,7 +108,7 @@ class SystemSettingsBloc
 
     // If symbol is null or empty, return a placeholder to avoid crashes
     if (symbol == null || symbol.isEmpty) {
-      return '\$'; // Use Euro as placeholder since that's what the user expects
+      return 'TSh'; // until settings load from the server
     }
 
     return symbol;

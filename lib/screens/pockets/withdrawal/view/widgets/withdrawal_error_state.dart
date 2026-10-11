@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../bloc/withdrawal_bloc.dart';
 import '../../bloc/withdrawal_event.dart';
 import '../../../../../utils/widgets/custom_text.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
 class WithdrawalErrorState extends StatelessWidget {
   final String errorMessage;

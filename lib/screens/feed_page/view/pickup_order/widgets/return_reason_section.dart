@@ -1,10 +1,11 @@
 // screens/feed_page/view/pickup_order/widgets/return_reason_section.dart
+import 'package:zenjishoppazz_rider/utils/currency_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hyper_local/screens/feed_page/model/return_orders_list_model.dart';
-import 'package:hyper_local/utils/widgets/custom_card.dart';
-import 'package:hyper_local/utils/widgets/custom_text.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/model/return_orders_list_model.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_card.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_text.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
 class ReturnReasonSection extends StatelessWidget {
   final Pickups pickup;
@@ -89,7 +90,7 @@ class ReturnReasonSection extends StatelessWidget {
                     _row(
                       context,
                       AppLocalizations.of(context)!.refundAmt,
-                      "₹${refundAmount.toString()}",
+                      CurrencyFormatter.formatAmount(context, refundAmount),
                       icon: Icons.account_balance_wallet,
                       isBold: true,
                     ),

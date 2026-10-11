@@ -9,7 +9,7 @@ class AppLocalizationsGu extends AppLocalizations {
   AppLocalizationsGu([String locale = 'gu']) : super(locale);
 
   @override
-  String get appTitle => 'હાયપર લોકલ ડેલિવરી';
+  String get appTitle => 'Zenjishoppazz ડેલિવરી';
 
   @override
   String get createAccount => 'એકાઉન્ટ બનાવો';
@@ -1849,7 +1849,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get preview => 'પૂર્વાવલોકન';
 
   @override
-  String get hyperLocal => 'હાયપર લોકલ';
+  String get hyperLocal => 'Zenjishoppazz';
 
   @override
   String get collectItemsStores => 'સ્ટોર્સથી આઇટમ્સ એકત્ર કરો';

@@ -17,7 +17,7 @@ import 'package:go_router/go_router.dart';
 import '../../../../router/app_routes.dart';
 import '../../../../utils/widgets/toast_message.dart';
 import '../../../../utils/currency_formatter.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
 class AvailableOrderCard extends StatelessWidget {
   final Orders order;

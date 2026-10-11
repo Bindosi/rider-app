@@ -1,10 +1,10 @@
 // widgets/return_order/return_store_details_section.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hyper_local/screens/feed_page/model/return_orders_list_model.dart';
-import 'package:hyper_local/utils/widgets/custom_card.dart';
-import 'package:hyper_local/utils/widgets/custom_text.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/model/return_orders_list_model.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_card.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_text.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
 class ReturnStoreDetailsSection extends StatelessWidget {
   final Pickups pickup;

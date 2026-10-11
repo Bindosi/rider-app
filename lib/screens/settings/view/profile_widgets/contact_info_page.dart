@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:country_picker/country_picker.dart';
-import 'package:hyper_local/screens/system_settings/bloc/system_settings_bloc.dart';
-import 'package:hyper_local/screens/system_settings/bloc/system_settings_event.dart';
-import 'package:hyper_local/utils/widgets/custom_appbar_without_navbar.dart';
-import 'package:hyper_local/utils/widgets/custom_scaffold.dart';
-import 'package:hyper_local/utils/widgets/custom_text.dart';
-import 'package:hyper_local/utils/widgets/custom_button.dart';
-import 'package:hyper_local/utils/widgets/custom_textfield.dart';
-import 'package:hyper_local/utils/widgets/empty_state_widget.dart';
-import 'package:hyper_local/utils/widgets/toast_message.dart';
+import 'package:zenjishoppazz_rider/screens/system_settings/bloc/system_settings_bloc.dart';
+import 'package:zenjishoppazz_rider/screens/system_settings/bloc/system_settings_event.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_appbar_without_navbar.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_scaffold.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_text.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_button.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_textfield.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/empty_state_widget.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/toast_message.dart';
 import '../../../../config/colors.dart';
 import '../../../../utils/widgets/custom_card.dart';
 import '../../bloc/profile_bloc/profile_bloc.dart';
@@ -19,7 +19,7 @@ import '../../bloc/profile_bloc/profile_state.dart';
 
 import '../../model/profile_model.dart';
 
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
 class ContactInfoPage extends StatefulWidget {
   const ContactInfoPage({super.key});

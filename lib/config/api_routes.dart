@@ -1,4 +1,4 @@
-import 'package:hyper_local/config/constant.dart';
+import 'package:zenjishoppazz_rider/config/constant.dart';
 
 String loginApi = '${baseUrl}login';
 String registerApi = '${baseUrl}register';

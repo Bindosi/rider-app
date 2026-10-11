@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "appTitle": "Hyper Local Delivery",
+  "appTitle": "Zenjishoppazz Rider",
   
   "@@auth": {},
   "createAccount": "Create Account",
@@ -900,7 +900,7 @@
   "darkTheme": "Dark Theme",
   "easyOnEyesLowLight": "Easy on the eyes in low light",
   "preview": "Preview",
-  "hyperLocal": "Hyper Local",
+  "hyperLocal": "Zenjishoppazz",
   "storePickup": "Store Pickup",
   "collectItemsStores": "Collect items from stores",
 

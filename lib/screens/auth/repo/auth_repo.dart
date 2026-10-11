@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:hyper_local/config/api_base_helper.dart';
-import 'package:hyper_local/config/api_routes.dart';
+import 'package:zenjishoppazz_rider/config/api_base_helper.dart';
+import 'package:zenjishoppazz_rider/config/api_routes.dart';
 
 class AuthRepository {
   Future<Map<String, dynamic>> login({

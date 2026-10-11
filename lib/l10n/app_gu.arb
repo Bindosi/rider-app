@@ -1,6 +1,6 @@
 {
   "@@locale": "gu",
-  "appTitle": "હાયપર લોકલ ડેલિવરી",
+  "appTitle": "Zenjishoppazz ડેલિવરી",
   
   "@@auth": {},
   "login": "લૉગિન",
@@ -842,7 +842,7 @@
   "darkTheme": "ડાર્ક થીમ",
   "easyOnEyesLowLight": "ઓછી રોશનીમાં આંખો માટે સરળ",
   "preview": "પૂર્વાવલોકન",
-  "hyperLocal": "હાયપર લોકલ",
+  "hyperLocal": "Zenjishoppazz",
   "storePickup": "સ્ટોર પિકઅપ",
   "collectItemsStores": "સ્ટોર્સથી આઇટમ્સ એકત્ર કરો",
 

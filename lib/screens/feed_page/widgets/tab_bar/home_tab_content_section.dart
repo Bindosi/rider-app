@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hyper_local/screens/feed_page/widgets/my_pickups/my_pickups_section.dart';
-import 'package:hyper_local/screens/feed_page/widgets/return_order/return_order_page.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/widgets/my_pickups/my_pickups_section.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/widgets/return_order/return_order_page.dart';
 import '../available_orders/available_orders_section.dart';
 import '../my_orders/my_orders_section.dart';
 

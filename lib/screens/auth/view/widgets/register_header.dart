@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../utils/widgets/custom_text.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 import '../../../../config/app_images.dart';
 
 class RegisterHeader extends StatelessWidget {

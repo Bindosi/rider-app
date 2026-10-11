@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hyper_local/utils/widgets/custom_scaffold.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_scaffold.dart';
 import '../../../utils/widgets/custom_button.dart';
 import '../../../utils/widgets/custom_card.dart';
 import '../../../utils/widgets/custom_text.dart';
@@ -22,7 +22,7 @@ import '../../feed_page/bloc/deliveryboy_status_update_bloc/deliveryboy_status_e
 import '../../feed_page/bloc/deliveryboy_status_update_bloc/deliveryboy_status_state.dart';
 import '../../../l10n/app_localizations.dart';
 
-import '../../../../config/colors.dart';
+import '../../../config/colors.dart';
 
 class PocketsPage extends StatefulWidget {
   const PocketsPage({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
-import 'package:hyper_local/config/api_base_helper.dart';
-import 'package:hyper_local/screens/feed_page/repo/return_order_repo.dart';
+import 'package:zenjishoppazz_rider/config/api_base_helper.dart';
+import 'package:zenjishoppazz_rider/screens/feed_page/repo/return_order_repo.dart';
 
 part 'update_return_order_status_event.dart';
 part 'update_return_order_status_state.dart';

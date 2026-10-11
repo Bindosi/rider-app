@@ -109,7 +109,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'Hyper Local Delivery'**
+  /// **'Zenjishoppazz Rider'**
   String get appTitle;
 
   /// No description provided for @createAccount.
@@ -3577,7 +3577,7 @@ abstract class AppLocalizations {
   /// No description provided for @hyperLocal.
   ///
   /// In en, this message translates to:
-  /// **'Hyper Local'**
+  /// **'Zenjishoppazz'**
   String get hyperLocal;
 
   /// No description provided for @collectItemsStores.

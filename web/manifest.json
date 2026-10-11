@@ -1,11 +1,11 @@
 {
-    "name": "hyper_local",
-    "short_name": "hyper_local",
+    "name": "Zenjishoppazz Rider",
+    "short_name": "Zenjishoppazz Rider",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Hyper Local",
+    "description": "Zenjishoppazz Rider",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

@@ -1830,7 +1830,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get preview => 'معاينة';
 
   @override
-  String get hyperLocal => 'هايبر لوكال';
+  String get hyperLocal => 'Zenjishoppazz';
 
   @override
   String get collectItemsStores => 'اجمع العناصر من المتاجر';

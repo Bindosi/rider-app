@@ -1,5 +1,6 @@
 // ignore_for_file: depend_on_referenced_packages
 
+import 'package:zenjishoppazz_rider/utils/currency_formatter.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:timezone/timezone.dart' as tz;
@@ -18,7 +19,7 @@ class NotificationService {
 
 
     const AndroidInitializationSettings initializationSettingsAndroid =
-        AndroidInitializationSettings('@mipmap/ic_launcher');
+        AndroidInitializationSettings('@drawable/notification');
 
 
     const DarwinInitializationSettings initializationSettingsIOS =
@@ -64,9 +65,9 @@ class NotificationService {
   }) async {
     const AndroidNotificationDetails androidPlatformChannelSpecifics =
         AndroidNotificationDetails(
-          'hyper_local_channel',
-          'Hyper Local Notifications',
-          channelDescription: 'Notifications for Hyper Local delivery app',
+          'zenjishoppazz_rider_channel',
+          'Zenjishoppazz Rider notifications',
+          channelDescription: 'Order and delivery updates for Zenjishoppazz riders',
           importance: Importance.high,
           priority: Priority.high,
           showWhen: true,
@@ -133,7 +134,7 @@ class NotificationService {
       id: int.parse(orderId) + 2000,
       title: 'Payment Received!',
       body:
-          'Payment of \$${amount.toStringAsFixed(2)} received for order #$orderId',
+          'Payment of ${CurrencyFormatter.formatAmountWithSymbol(CurrencyFormatter.fallbackSymbol, amount)} received for order #$orderId',
       payload: 'payment_$orderId',
     );
   }
@@ -146,7 +147,7 @@ class NotificationService {
     await showNotification(
       id: 9999,
       title: 'Earnings Update',
-      body: 'Your $period earnings: \$${amount.toStringAsFixed(2)}',
+      body: 'Your $period earnings: ${CurrencyFormatter.formatAmountWithSymbol(CurrencyFormatter.fallbackSymbol, amount)}',
       payload: 'earnings_$period',
     );
   }
@@ -189,10 +190,10 @@ class NotificationService {
   }) async {
     const AndroidNotificationDetails androidPlatformChannelSpecifics =
         AndroidNotificationDetails(
-          'hyper_local_scheduled_channel',
+          'zenjishoppazz_rider_scheduled_channel',
           'Scheduled Notifications',
           channelDescription:
-              'Scheduled notifications for Hyper Local delivery app',
+              'Scheduled reminders for Zenjishoppazz riders',
           importance: Importance.high,
           priority: Priority.high,
           showWhen: true,

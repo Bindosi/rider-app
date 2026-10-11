@@ -1,4 +1,4 @@
-package com.hyperlocal.partner
+package com.zenjishoppazz.rider
 
 import io.flutter.embedding.android.FlutterActivity
 

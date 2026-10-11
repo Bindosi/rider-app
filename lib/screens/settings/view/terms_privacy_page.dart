@@ -4,15 +4,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_html/flutter_html.dart';
 
 
-import 'package:hyper_local/utils/widgets/custom_appbar_without_navbar.dart';
-import 'package:hyper_local/utils/widgets/custom_scaffold.dart';
-import 'package:hyper_local/utils/widgets/custom_text.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_appbar_without_navbar.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_scaffold.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_text.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
-import 'package:hyper_local/config/colors.dart';
-import 'package:hyper_local/utils/widgets/empty_state_widget.dart';
+import 'package:zenjishoppazz_rider/config/colors.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/empty_state_widget.dart';
 
-import 'package:hyper_local/utils/widgets/loading_widget.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/loading_widget.dart';
 
 import '../../system_settings/bloc/system_settings_bloc.dart';
 import '../../system_settings/bloc/system_settings_event.dart';

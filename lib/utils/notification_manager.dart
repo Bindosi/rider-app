@@ -24,14 +24,15 @@ class NotificationManager {
     try {
       log('🔔 Initializing NotificationManager...');
 
+      // Register message handlers first so background messages are handled
+      // even before the user has answered the permission prompt.
+      _setupMessageHandlers();
+
       // Request permission
       await requestPermission();
 
       // Initialize local notifications
       await _initializeLocalNotifications();
-
-      // Setup message handlers
-      _setupMessageHandlers();
 
       // Get and save FCM token
       await _retrieveAndSaveFCMToken();
@@ -44,7 +45,18 @@ class NotificationManager {
     }
   }
 
-  Future<void> requestPermission() async {
+  // The permission request currently on screen, if any.
+  Future<void>? _pendingPermissionRequest;
+
+  /// Asks for notification permission, but never twice at the same time.
+  /// Startup and the splash screen both ask; on Android two overlapping
+  /// requests make the system dialog stop responding to taps.
+  Future<void> requestPermission() {
+    return _pendingPermissionRequest ??=
+        _requestPermission().whenComplete(() => _pendingPermissionRequest = null);
+  }
+
+  Future<void> _requestPermission() async {
     try {
       log('📱 Requesting notification permission...');
 
@@ -73,7 +85,7 @@ class NotificationManager {
   }
 
   Future<void> _initializeLocalNotifications() async {
-    const androidSettings = AndroidInitializationSettings('@mipmap/ic_launcher');
+    const androidSettings = AndroidInitializationSettings('@drawable/notification');
     const iosSettings = DarwinInitializationSettings(
       requestAlertPermission: true,
       requestBadgePermission: true,
@@ -226,7 +238,7 @@ class NotificationManager {
             channelDescription: 'This channel is used for important notifications.',
             importance: Importance.high,
             priority: Priority.high,
-            icon: android?.smallIcon ?? '@mipmap/ic_launcher',
+            icon: android?.smallIcon ?? '@drawable/notification',
           ),
           iOS: const DarwinNotificationDetails(
             presentAlert: true,

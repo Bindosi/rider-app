@@ -9,7 +9,7 @@ import '../../bloc/available_orders_bloc/available_orders_bloc.dart';
 import '../../bloc/available_orders_bloc/available_orders_event.dart';
 import '../../bloc/available_orders_bloc/available_orders_state.dart';
 import 'available_order_card.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 import '../../bloc/deliveryboy_status_update_bloc/deliveryboy_status_bloc.dart';
 import '../../bloc/deliveryboy_status_update_bloc/deliveryboy_status_event.dart';
 

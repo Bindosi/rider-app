@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hyper_local/utils/widgets/custom_appbar_without_navbar.dart';
-import 'package:hyper_local/utils/widgets/custom_card.dart';
-import 'package:hyper_local/utils/widgets/custom_text.dart';
-import 'package:hyper_local/utils/widgets/empty_state_widget.dart';
-import 'package:hyper_local/utils/widgets/loading_widget.dart';
-import 'package:hyper_local/utils/widgets/toast_message.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_appbar_without_navbar.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_card.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_text.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/empty_state_widget.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/loading_widget.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/toast_message.dart';
 import '../../../../config/colors.dart';
 import '../../bloc/profile_bloc/profile_bloc.dart';
 import '../../bloc/profile_bloc/profile_event.dart';
@@ -14,7 +14,7 @@ import '../../bloc/profile_bloc/profile_state.dart';
 import '../../repo/profile_repo.dart';
 import '../../model/profile_model.dart';
 import 'document_viewer_page.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
 class VerificationStatusPage extends StatefulWidget {
   const VerificationStatusPage({super.key});

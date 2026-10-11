@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../model/available_orders.dart';
 import 'statistics_card.dart';
 import '../../../../utils/currency_formatter.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
 
 class StatisticsRow extends StatelessWidget {
   final Orders order;

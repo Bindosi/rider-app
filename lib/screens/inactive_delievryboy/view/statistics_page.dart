@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hyper_local/utils/widgets/empty_state_widget.dart';
-import 'package:hyper_local/utils/widgets/loading_widget.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/empty_state_widget.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/loading_widget.dart';
 import '../../../l10n/app_localizations.dart';
 import '../../../router/app_routes.dart';
 import '../../../utils/widgets/custom_card.dart';
@@ -793,7 +793,7 @@ class _StatisticsPageState extends State<StatisticsPage> {
                   final index = barSpot.x.toInt();
                   final label = index < labels.length ? labels[index] : '';
                   return LineTooltipItem(
-                    '$label\n${settingsData.currencySymbol}${barSpot.y.toStringAsFixed(0)}',
+                    '$label\n${CurrencyFormatter.formatAmountWithSymbol(settingsData.currencySymbol, barSpot.y.round())}',
                     TextStyle(
                       color: Theme.of(context).colorScheme.onSurface,
                       fontWeight: FontWeight.bold,

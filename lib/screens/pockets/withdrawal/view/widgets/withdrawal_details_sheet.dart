@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hyper_local/utils/widgets/custom_text.dart';
-import 'package:hyper_local/l10n/app_localizations.dart';
-import 'package:hyper_local/screens/pockets/withdrawal/model/withdrawal_model.dart';
-import 'package:hyper_local/utils/currency_formatter.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/custom_text.dart';
+import 'package:zenjishoppazz_rider/l10n/app_localizations.dart';
+import 'package:zenjishoppazz_rider/screens/pockets/withdrawal/model/withdrawal_model.dart';
+import 'package:zenjishoppazz_rider/utils/currency_formatter.dart';
 
 class WithdrawalDetailsSheet extends StatelessWidget {
   final WithdrawalModel withdrawal;
@@ -61,7 +61,7 @@ class WithdrawalDetailsSheet extends StatelessWidget {
                       CustomText(
                         text: CurrencyFormatter.formatAmount(
                           context,
-                          withdrawal.amount?.toStringAsFixed(2) ?? '0.00',
+                          withdrawal.amount ?? 0,
                         ),
                         fontSize: 24,
                         fontWeight: FontWeight.bold,

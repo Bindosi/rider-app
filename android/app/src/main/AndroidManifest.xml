@@ -15,13 +15,13 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" tools:node="remove"/>
 
     <application
-        android:label="Hyperlocal - Rider App"
+        android:label="Zenji Rider"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:enableOnBackInvokedCallback="true">
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_ACTUAL_API_KEY_HERE"/>
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/notification" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

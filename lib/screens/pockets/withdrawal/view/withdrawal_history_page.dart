@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hyper_local/utils/widgets/empty_state_widget.dart';
+import 'package:zenjishoppazz_rider/utils/widgets/empty_state_widget.dart';
 
 import '../../../../config/colors.dart';
 import '../../../../utils/widgets/custom_scaffold.dart';

@@ -1,29 +1,48 @@
-"""Build every ZenjiJet (rider app) logo / icon asset.
+"""Build every ZenjiJet (rider app) logo / icon asset from the master artwork.
 
-Inputs (this folder):
-  zenjijet_mark.png       scooter + Zenjishoppazz bag, with speed lines
-  zenjijet_icon_mark.png  same without speed lines (fills small icons better)
-Both come from zenjijet_mark.py. Run from the repo root:
-  python3 branding/zenjijet_mark.py && python3 branding/make_logos.py .
+Masters (this folder), cut from zenjijet_design_sheet.png and AI-upscaled 4x
+(see extract_parts.py):
+  zj_mark_full.png    rider + scooter + delivery box, with speed lines
+  zj_mark_icon.png    same without speed lines (reads better on small icons)
+  zj_word.png         'ZenjiJet' wordmark (navy + orange)
+  zj_word_white.png   same with white 'Zenji' for dark backgrounds
+  zj_tag.png / zj_tag_light.png   'by Zenjishoppazz'
+  zj_z_white.png      the white 'Z' monogram
+
+Run from the repo root:  python3 branding/make_logos.py .
 """
 import json, os, sys
 import numpy as np
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFilter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(HERE)
 
-NAVY = (10, 58, 107)
-ORANGE = (208, 132, 74)
-PEACH = (255, 205, 160)
-GREY = (90, 107, 128)
-WHITE = (255, 255, 255)
-ICON_BG = (255, 228, 204)   # soft peach: tells ZenjiJet apart from the customer app's white icon
-SERIF_BI = '/usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf'
-SANS = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
+ICON_BG = (255, 228, 204)   # warm peach background for app icons
+NAVY = (12, 30, 60)         # badge colour for the small Z (favicon)
 
-MARK = Image.open(os.path.join(HERE, 'zenjijet_mark.png')).convert('RGBA')
-ICON_MARK = Image.open(os.path.join(HERE, 'zenjijet_icon_mark.png')).convert('RGBA')
+
+def load(name):
+    return Image.open(os.path.join(HERE, name)).convert('RGBA')
+
+
+MARK = load('zj_mark_full.png')
+ICON_MARK = load('zj_mark_icon.png')
+WORD, WORD_WHITE = load('zj_word.png'), load('zj_word_white.png')
+TAG, TAG_LIGHT = load('zj_tag.png'), load('zj_tag_light.png')
+
+
+def clean_z():
+    """Smooth, crisp white Z: upscale the extracted monogram, threshold, soften edges."""
+    z = load('zj_z_white.png')
+    a = z.split()[3].resize((z.width * 6, z.height * 6), Image.LANCZOS)
+    a = a.point(lambda v: 255 if v > 110 else 0).filter(ImageFilter.GaussianBlur(2.2))
+    out = Image.new('RGBA', a.size, (255, 255, 255, 0))
+    out.putalpha(a)
+    return out.crop(out.getbbox())
+
+
+Z = clean_z()
 
 
 def out(rel):
@@ -34,14 +53,13 @@ def out(rel):
 
 def fit(img, w, h):
     im = img.copy()
-    im.thumbnail((w, h), Image.LANCZOS)
+    im.thumbnail((max(1, w), max(1, h)), Image.LANCZOS)
     return im
 
 
 def centered(img, size, box_frac, bg=None, radius=0.0):
-    """img fitted into a size x size canvas, occupying box_frac of it."""
     c = Image.new('RGBA', (size, size), (bg + (255,)) if bg else (0, 0, 0, 0))
-    m = fit(img, max(1, int(size * box_frac)), max(1, int(size * box_frac)))
+    m = fit(img, int(size * box_frac), int(size * box_frac))
     c.alpha_composite(m, ((size - m.width) // 2, (size - m.height) // 2))
     if radius:
         mask = Image.new('L', (size * 4, size * 4), 0)
@@ -51,69 +69,45 @@ def centered(img, size, box_frac, bg=None, radius=0.0):
     return c
 
 
-def silhouette(img, colour=WHITE):
+def silhouette(img, cut_light=True):
+    """White single-colour version; light details (Z on box, wheel hubs) become holes."""
     a = np.array(img).astype(np.int32)
-    s = np.zeros_like(a)
-    s[:, :, 0], s[:, :, 1], s[:, :, 2] = colour
-    s[:, :, 3] = a[:, :, 3]
+    al = a[:, :, 3].copy()
+    if cut_light:
+        light = a[:, :, :3].mean(2) > 200
+        al[light] = 0
+    s = np.zeros_like(a); s[:, :, :3] = 255; s[:, :, 3] = al
     return Image.fromarray(s.astype(np.uint8), 'RGBA')
 
 
-def wordmark(zenji_colour, jet_colour, px=300):
-    """'Zenji' + 'Jet' on one baseline."""
-    f = ImageFont.truetype(SERIF_BI, px)
-    w = int(f.getlength('ZenjiJet')) + px
-    h = int(px * 1.6)
-    im = Image.new('RGBA', (w, h), (0, 0, 0, 0))
-    d = ImageDraw.Draw(im)
-    x, base = px // 4, int(px * 1.15)
-    d.text((x, base), 'Zenji', font=f, fill=zenji_colour + (255,), anchor='ls')
-    d.text((x + f.getlength('Zenji') + px * 0.02, base), 'Jet', font=f, fill=jet_colour + (255,), anchor='ls')
-    return im.crop(im.getbbox())
-
-
-def text_img(text, font, px, colour):
-    f = ImageFont.truetype(font, px)
-    l, t, r, b = f.getbbox(text)
-    im = Image.new('RGBA', (r - l + 6, b - t + 6), (0, 0, 0, 0))
-    ImageDraw.Draw(im).text((3 - l, 3 - t), text, font=f, fill=colour + (255,))
-    return im
-
-
-def lockup(zenji, jet, by_colour, tile=False):
-    mark = fit(MARK, 1300, 900)
-    if tile:   # navy scooter needs a light tile on dark backgrounds
-        t = Image.new('RGBA', (mark.width + 160, mark.height + 160), (0, 0, 0, 0))
-        ImageDraw.Draw(t).rounded_rectangle((0, 0, t.width - 1, t.height - 1), radius=150, fill=WHITE + (255,))
-        t.alpha_composite(mark, (80, 80))
-        mark = t
-    word = wordmark(zenji, jet)
-    by = text_img('by Zenjishoppazz', SANS, 92, by_colour)
-    W = max(mark.width, word.width, by.width) + 40
-    H = mark.height + 60 + word.height + 30 + by.height
+def lockup(word, tag):
+    """Mark on top, wordmark below, tagline right-aligned under the wordmark (as designed)."""
+    mark = MARK
+    w = fit(word, int(mark.width * 1.02), 10_000)
+    t = fit(tag, int(w.width * 0.50), 10_000)
+    W = max(mark.width, w.width) + 20
+    H = mark.height + 40 + w.height + 18 + t.height
     c = Image.new('RGBA', (W, H), (0, 0, 0, 0))
-    y = 0
-    for im, gap in ((mark, 60), (word, 30), (by, 0)):
-        c.alpha_composite(im, ((W - im.width) // 2, y))
-        y += im.height + gap
+    c.alpha_composite(mark, ((W - mark.width) // 2, 0))
+    wx = (W - w.width) // 2
+    c.alpha_composite(w, (wx, mark.height + 40))
+    c.alpha_composite(t, (wx + w.width - t.width - int(w.width * 0.02), mark.height + 40 + w.height + 18))
     return c.crop(c.getbbox())
 
 
 # ---------------------------------------------------------------- in-app logos
-# app-logo-dark = dark text, used on the white splash / login / register screens
-lockup(NAVY, ORANGE, GREY).save(out('assets/png/app-logo-dark.png'), optimize=True)
-# app-logo-light = light text, for dark backgrounds
-lockup(WHITE, PEACH, (200, 210, 225), tile=True).save(out('assets/png/app-logo-light.png'), optimize=True)
+fit(lockup(WORD, TAG), 900, 900).save(out('assets/png/app-logo-dark.png'), optimize=True)        # light screens
+fit(lockup(WORD_WHITE, TAG_LIGHT), 900, 900).save(out('assets/png/app-logo-light.png'), optimize=True)  # dark screens
 
 # ---------------------------------------------------------------- Android
 dens = {'mdpi': 1, 'hdpi': 1.5, 'xhdpi': 2, 'xxhdpi': 3, 'xxxhdpi': 4}
 res = 'android/app/src/main/res'
 for d, k in dens.items():
-    centered(ICON_MARK, round(48 * k), 0.82, bg=ICON_BG, radius=0.22).save(out(f'{res}/mipmap-{d}/ic_launcher.png'))
-    fs = round(108 * k)   # adaptive icon: keep the mark inside the 66dp safe zone
-    centered(ICON_MARK, fs, 0.52).save(out(f'{res}/mipmap-{d}/ic_launcher_foreground.png'))
-    centered(silhouette(ICON_MARK), fs, 0.52).save(out(f'{res}/mipmap-{d}/ic_launcher_monochrome.png'))
-    fit(MARK, round(200 * k), round(140 * k)).save(out(f'{res}/mipmap-{d}/launch_image.png'))
+    centered(ICON_MARK, round(48 * k), 0.86, bg=ICON_BG, radius=0.22).save(out(f'{res}/mipmap-{d}/ic_launcher.png'))
+    fs = round(108 * k)                       # adaptive icon: stay inside the 66dp safe zone
+    centered(ICON_MARK, fs, 0.60).save(out(f'{res}/mipmap-{d}/ic_launcher_foreground.png'))
+    centered(silhouette(ICON_MARK), fs, 0.60).save(out(f'{res}/mipmap-{d}/ic_launcher_monochrome.png'))
+    fit(MARK, round(220 * k), round(130 * k)).save(out(f'{res}/mipmap-{d}/launch_image.png'))
 
 with open(out(f'{res}/mipmap-anydpi-v26/ic_launcher.xml'), 'w') as f:
     f.write('<?xml version="1.0" encoding="utf-8"?>\n'
@@ -126,9 +120,9 @@ with open(out(f'{res}/values/ic_launcher_background.xml'), 'w') as f:
     f.write('<?xml version="1.0" encoding="utf-8"?>\n<resources>\n'
             '    <color name="ic_launcher_background">#%02X%02X%02X</color>\n</resources>\n' % ICON_BG)
 
-# status-bar notification icon: single-colour scooter silhouette
+# status-bar notification icon: the white Z monogram (clear at 24dp)
 for d in ('drawable', 'drawable-v21'):
-    centered(silhouette(ICON_MARK), 192, 0.92).save(out(f'{res}/{d}/notification.png'))
+    centered(Z, 192, 0.86).save(out(f'{res}/{d}/notification.png'))
 
 # ---------------------------------------------------------------- iOS
 iconset = 'ios/Runner/Assets.xcassets/AppIcon.appiconset'
@@ -140,13 +134,13 @@ for im in contents['images']:
         pt = float(im['size'].split('x')[0]); sc = float(im['scale'].rstrip('x'))
         needed.add((fn, round(pt * sc)))
 for fn, px in sorted(needed):
-    centered(ICON_MARK, px, 0.80, bg=ICON_BG).convert('RGB').save(out(f'{iconset}/{fn}'))
+    centered(ICON_MARK, px, 0.84, bg=ICON_BG).convert('RGB').save(out(f'{iconset}/{fn}'))
 for fn in os.listdir(out(iconset)):
     if fn.endswith('.png') and fn not in {n for n, _ in needed}:
         os.remove(out(f'{iconset}/{fn}'))
 launch = 'ios/Runner/Assets.xcassets/LaunchImage.imageset'
 for sc, fn in ((1, 'LaunchImage.png'), (2, 'LaunchImage@2x.png'), (3, 'LaunchImage@3x.png')):
-    fit(MARK, 200 * sc, 140 * sc).save(out(f'{launch}/{fn}'))
+    fit(MARK, 220 * sc, 130 * sc).save(out(f'{launch}/{fn}'))
 json.dump({'images': [{'idiom': 'universal', 'filename': f, 'scale': s} for s, f in
                       (('1x', 'LaunchImage.png'), ('2x', 'LaunchImage@2x.png'), ('3x', 'LaunchImage@3x.png'))],
            'info': {'version': 1, 'author': 'xcode'}}, open(out(f'{launch}/Contents.json'), 'w'), indent=2)
@@ -156,14 +150,14 @@ mac = 'macos/Runner/Assets.xcassets/AppIcon.appiconset'
 if os.path.isdir(out(mac)):
     for s in (16, 32, 64, 128, 256, 512, 1024):
         c = Image.new('RGBA', (s, s), (0, 0, 0, 0))
-        inner = centered(ICON_MARK, round(s * 0.80), 0.80, bg=ICON_BG, radius=0.225)
+        inner = centered(ICON_MARK, round(s * 0.80), 0.84, bg=ICON_BG, radius=0.225)
         c.alpha_composite(inner, ((s - inner.width) // 2, (s - inner.height) // 2))
         c.save(out(f'{mac}/app_icon_{s}.png'))
 
 # ---------------------------------------------------------------- web
-centered(ICON_MARK, 32, 0.92, bg=ICON_BG).convert('RGB').save(out('web/favicon.png'))
-centered(ICON_MARK, 192, 0.80, bg=ICON_BG).convert('RGB').save(out('web/icons/Icon-192.png'))
-centered(ICON_MARK, 512, 0.80, bg=ICON_BG).convert('RGB').save(out('web/icons/Icon-512.png'))
+centered(Z, 32, 0.72, bg=NAVY, radius=0.22).save(out('web/favicon.png'))   # tiny: the Z badge, as designed
+centered(ICON_MARK, 192, 0.84, bg=ICON_BG).convert('RGB').save(out('web/icons/Icon-192.png'))
+centered(ICON_MARK, 512, 0.84, bg=ICON_BG).convert('RGB').save(out('web/icons/Icon-512.png'))
 centered(ICON_MARK, 192, 0.64, bg=ICON_BG).convert('RGB').save(out('web/icons/Icon-maskable-192.png'))
 centered(ICON_MARK, 512, 0.64, bg=ICON_BG).convert('RGB').save(out('web/icons/Icon-maskable-512.png'))
 print('done')

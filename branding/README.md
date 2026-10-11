@@ -1,17 +1,27 @@
 # ZenjiJet logo assets
 
-ZenjiJet is the Zenjishoppazz rider (delivery partner) app. Its mark is an
-original scooter in the brand navy/orange carrying the Zenjishoppazz bag.
+ZenjiJet is the Zenjishoppazz rider (delivery partner) app.
 
-- `zenjijet_mark.py`: draws the mark (SVG rendered with cairosvg) using the
-  cleaned bag from `logo_x4.png`. Writes `zenjijet_mark.png` (with speed lines)
-  and `zenjijet_icon_mark.png` (without, for small icons).
-- `make_logos.py`: builds the in-app logos (`assets/png/app-logo-*.png`), Android
-  launcher/adaptive/themed/notification icons, iOS app icon and launch image,
-  macOS and web icons. Icons use a peach background so ZenjiJet is easy to tell
-  apart from the Zenjishoppazz customer app on the same phone.
+- `zenjijet_design_sheet.png`: the approved design sheet (logo, dark version,
+  app icons, compact logo, monochrome / favicon).
+- `zj_*.png`: master artwork cut from the sheet, AI-upscaled 4x with a clean
+  transparent background:
+  - `zj_mark_full.png` rider + scooter + box with speed lines
+  - `zj_mark_icon.png` same without speed lines (small icons)
+  - `zj_word.png`, `zj_word_white.png` the ZenjiJet wordmark (light / dark backgrounds)
+  - `zj_tag.png`, `zj_tag_light.png` "by Zenjishoppazz"
+  - `zj_z_white.png` the Z monogram (notification icon, favicon)
+- `make_logos.py`: builds every logo and icon in the app from the masters
+  (in-app logos, Android launcher / adaptive / themed / notification icons,
+  iOS app icon and launch image, macOS and web icons). App icons use the warm
+  peach background.
 
 ```
-pip install pillow numpy cairosvg
-python3 branding/zenjijet_mark.py && python3 branding/make_logos.py .
+pip install pillow numpy
+python3 branding/make_logos.py .
 ```
+
+The `extract_*.py` scripts document how the masters were cut from the sheet
+(OpenCV EDSR x4 super-resolution, then background removal). You only need them
+if the design sheet changes; a high-resolution or SVG original from the
+designer would replace this step.

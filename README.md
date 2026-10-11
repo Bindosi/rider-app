@@ -1,6 +1,6 @@
-# Zenjishoppazz Rider
+# ZenjiJet
 
-Zenjishoppazz delivery partner (rider) app (Flutter).
+ZenjiJet: the Zenjishoppazz delivery partner (rider) app (Flutter).
 
 - Package / bundle ID: `com.zenjishoppazz.rider`
 - Backend: https://admin.zenjishoppazz.com (`/api/delivery-boy/`)

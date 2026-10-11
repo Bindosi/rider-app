@@ -66,8 +66,8 @@ class NotificationService {
     const AndroidNotificationDetails androidPlatformChannelSpecifics =
         AndroidNotificationDetails(
           'zenjishoppazz_rider_channel',
-          'Zenjishoppazz Rider notifications',
-          channelDescription: 'Order and delivery updates for Zenjishoppazz riders',
+          'ZenjiJet notifications',
+          channelDescription: 'Order and delivery updates for ZenjiJet riders',
           importance: Importance.high,
           priority: Priority.high,
           showWhen: true,
@@ -193,7 +193,7 @@ class NotificationService {
           'zenjishoppazz_rider_scheduled_channel',
           'Scheduled Notifications',
           channelDescription:
-              'Scheduled reminders for Zenjishoppazz riders',
+              'Scheduled reminders for ZenjiJet riders',
           importance: Importance.high,
           priority: Priority.high,
           showWhen: true,

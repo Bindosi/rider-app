@@ -1,11 +1,11 @@
 {
-    "name": "Zenjishoppazz Rider",
-    "short_name": "Zenjishoppazz Rider",
+    "name": "ZenjiJet",
+    "short_name": "ZenjiJet",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Zenjishoppazz Rider",
+    "description": "ZenjiJet",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
